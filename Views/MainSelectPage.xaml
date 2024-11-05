@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaskAlert.Views.MainSelectPage"
+             Title="MainSelectPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#FFDE59">
+
+    <ScrollView>
+        <Grid RowDefinitions="80,250,250,170"
+              RowSpacing="10"
+              Margin="10,20">
+
+        <Label 
+            Text="TaskAlert"
+            FontFamily="Actfont"
+            FontSize="60"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+        
+        <VerticalStackLayout Grid.Row="1">
+            <Image Source="actimg"
+                   HeightRequest="200"
+                   WidthRequest="200"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center"
+                   />
+            <Button Text="Activity"
+                    TextColor="White"
+                   FontSize="30"
+                   FontFamily="Actfont"
+                   WidthRequest="200"
+                   BackgroundColor="#FF914D"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center"
+                   Clicked="ActButton_Clicked"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="2">
+            <Image Source="rouimg"
+                   HeightRequest="200"
+                   WidthRequest="200"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center"
+                   />
+            <Button Text="Routine"
+                    TextColor="White"
+                   FontSize="30"
+                   FontFamily="Actfont"
+                    WidthRequest="200"
+                   BackgroundColor="#FF914D"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center"
+                   Clicked="RoutineButton_Clicked"/>
+        </VerticalStackLayout>
+
+            <ImageButton Source="smini"
+                        WidthRequest="200"
+                        VerticalOptions="End" 
+                        HorizontalOptions="End"
+                         Grid.Row="3"
+                        Clicked="SoundButton_Clicked"/>
+
+    </Grid>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaskAlert.Views.AddTaskPage"
+             BackgroundColor="#FFDE59"
+             Title="AddTaskPage">
+    <ScrollView>
+    <StackLayout Margin="20" Spacing="10">
+        <VerticalStackLayout>
+            <Label Text="Name"
+                   TextColor="Black"
+               FontFamily="Actfont"
+               FontSize="30"/>
+            <Entry Placeholder="Enter your Name"
+                   PlaceholderColor="#CB6CE6"
+                   FontAttributes="Bold"
+                   Text="{Binding Name}"
+            TextColor="Black"
+                   HeightRequest="70" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Label Text="Note"
+                   TextColor="Black"
+               FontFamily="Actfont"
+               FontSize="30"/>
+            <Editor Placeholder="Enter your Note"
+                    PlaceholderColor="#CB6CE6"
+                    FontAttributes="Bold"
+                    Text="{Binding Note}"
+                    TextColor="Black"
+                    HeightRequest="100" />
+        </VerticalStackLayout>
+
+        <HorizontalStackLayout Margin="0,10">
+                <Label Text="Time" FontFamily="Actfont" FontSize="30" TextColor="Black"/>
+            <TimePicker HorizontalOptions="End"
+                        Format="T"
+                        Time="{Binding Time}"
+                        Margin="140,0,0,0"
+                        WidthRequest="150"
+                        TextColor="#CB6CE6"
+                        FontAttributes="Bold"
+                        FontSize="18"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+                <Label Text="Notification" TextColor="Black" FontFamily="Actfont" FontSize="30" HorizontalTextAlignment="Start" />
+            <Switch IsToggled="{Binding NotiActivity}" Margin="100,0,0,0" ThumbColor="#CB6CE6" OnColor="Gray" />
+        </HorizontalStackLayout>
+
+        <Frame BackgroundColor="Cornsilk">
+            <VerticalStackLayout>
+                    <Label Text=" Daily / Weekly" TextColor="Black" FontFamily="Actfont" FontSize="30" HorizontalTextAlignment="Center" />
+                <Switch IsToggled="{Binding ModeActivity}" ThumbColor="#CB6CE6" OnColor="Gray"
+                    HorizontalOptions="Center"/>
+                <Label Text="(open notification before choosing the frequency)"
+                       TextColor="Black"
+                       FontFamily="Actfont"/>
+            </VerticalStackLayout>
+        </Frame>
+        
+
+        <Button Text="Save"
+                    FontFamily="Actfont"
+                    FontSize="25"
+                    WidthRequest="170"
+                    HeightRequest="70"
+                    Margin="0,30"
+                    VerticalOptions="End"
+                    Clicked="OnSaveButtonClicked"
+                    BackgroundColor="#FF914D"/>
+
+    </StackLayout>
+    </ScrollView>
+</ContentPage>

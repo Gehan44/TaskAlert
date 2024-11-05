@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaskAlert.Views.RoutinePage"
+             BackgroundColor="#FFDE59"
+             Title="RoutinePage">
+    <ScrollView>
+    <Grid RowDefinitions="100,160,160,160,100"
+          ColumnDefinitions="200,200"
+          Margin="5,20"
+          RowSpacing="10"
+          ColumnSpacing="-16">
+
+        <VerticalStackLayout Grid.ColumnSpan="2">
+            <Label Text="Routine"
+            TextColor="Black"
+            FontSize="50"
+            FontFamily="Actfont"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+            <Label Text="'Recommend healthy time to start the routine'"
+                   TextColor="Black"
+                   FontFamily="Actfont"
+                   FontSize="18"
+                   HorizontalTextAlignment="Center"/>
+
+        </VerticalStackLayout>
+
+
+        <Frame BackgroundColor="#F6F1EB" Grid.Row="1" Grid.Column="0" CornerRadius="25"
+               Margin="10,0">
+            <VerticalStackLayout>
+                <Image Source="bed" HeightRequest="100"/>
+                <Label Text="07:00 AM"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+            </VerticalStackLayout>
+        </Frame>
+
+        <Frame BackgroundColor="#F6F1EB" Grid.Row="1" Grid.Column="1" CornerRadius="25"
+               Margin="10,0">
+            <VerticalStackLayout>
+                <Image Source="breakfast" HeightRequest="100"/>
+                <Label Text="08:30 AM"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+            </VerticalStackLayout>
+        </Frame>
+
+        <Frame BackgroundColor="#F6F1EB" Grid.Row="2" Grid.Column="0" CornerRadius="25"
+               Margin="10,0">
+            <VerticalStackLayout>
+                <Image Source="lunch" HeightRequest="100"/>
+                <Label Text="12:00 PM"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+            </VerticalStackLayout>
+        </Frame>
+
+        <Frame BackgroundColor="#F6F1EB" Grid.Row="2" Grid.Column="1" CornerRadius="25"
+               Margin="10,0">
+            <VerticalStackLayout>
+                <Image Source="dinner" HeightRequest="100"/>
+                <Label Text="07:00 PM"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+            </VerticalStackLayout>
+            
+        </Frame>
+
+        <Frame BackgroundColor="#F6F1EB" Grid.Row="3" Grid.ColumnSpan="2" CornerRadius="25"
+               Margin="10,0">
+            <VerticalStackLayout>
+                <Image Source="workout" HeightRequest="100"/>
+                <Label Text="10:00 AM"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+            </VerticalStackLayout>
+        </Frame>
+        
+        <Button Text="Add to Activity" Grid.Row="4" Grid.ColumnSpan="2"
+                    FontFamily="Actfont"
+                    FontSize="25"
+                    WidthRequest="200"
+                    HeightRequest="70"
+                    Margin="0,20"
+                    VerticalOptions="End"
+                    Clicked="Button_Clicked"
+                    BackgroundColor="#FF914D"
+                HorizontalOptions="Center"/>
+    </Grid>
+    </ScrollView>
+</ContentPage>
